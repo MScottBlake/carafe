@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>autoremove</key>
+	<false/>
+	<key>catalogs</key>
+	<array>
+		<string>production</string>
+	</array>
+	<key>category</key>
+	<string>Security</string>
+	<key>description</key>
+	<string>Updates vulnerable versions of Git installed via homebrew</string>
+	<key>developer</key>
+	<string>Airbnb - InfoSec</string>
+	<key>display_name</key>
+	<string>Required git update</string>
+	<key>icon_name</key>
+	<string>homebrew.png</string>
+	<key>installcheck_script</key>
+	<string>#!/bin/sh
+# Checks at least git 2.50.1 is installed, doesn't care if it's not installed at all, and will return appropriate exit codes for munki	
+/opt/macadmins/bin/carafe check --min-version=2.50.1 --skip-not-installed --munki-installcheck git
+</string>
+	<key>installed_size</key>
+	<integer>3</integer>
+	<key>installer_item_hash</key>
+	<string>6bf8b04da0852cae2ba136cd853e085a61bc134162183fe97e449810899b7a8b</string>
+	<key>installer_item_size</key>
+	<integer>2</integer>
+	<key>installer_type</key>
+	<string>nopkg</string>
+	<key>minimum_os_version</key>
+	<string>10.5.0</string>
+	<key>name</key>
+	<string>update_git</string>
+	<key>postinstall_script</key>
+	<string>#!/bin/sh
+/opt/macadmins/bin/carafe upgrade --min-version=2.50.1 git
+</string>
+	<key>unattended_install</key>
+	<true/>
+	<key>uninstallable</key>
+	<false/>
+	<key>version</key>
+	<string>2.50.1</string>
+	<key>requires</key>
+	<array>
+		<string>carafe</string>
+	</array>
+</dict>
+</plist>

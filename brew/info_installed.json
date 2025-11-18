@@ -1,0 +1,165 @@
+[
+    {
+      "name": "htop",
+      "full_name": "htop",
+      "tap": "homebrew/core",
+      "oldnames": [
+        "htop-osx"
+      ],
+      "aliases": [
+  
+      ],
+      "versioned_formulae": [
+  
+      ],
+      "desc": "Improved top (interactive process viewer)",
+      "license": "GPL-2.0-or-later",
+      "homepage": "https://htop.dev/",
+      "versions": {
+        "stable": "3.3.0",
+        "head": "HEAD",
+        "bottle": true
+      },
+      "urls": {
+        "stable": {
+          "url": "https://github.com/htop-dev/htop/archive/refs/tags/3.3.0.tar.gz",
+          "tag": null,
+          "revision": null,
+          "using": null,
+          "checksum": "1e5cc328eee2bd1acff89f860e3179ea24b85df3ac483433f92a29977b14b045"
+        },
+        "head": {
+          "url": "https://github.com/htop-dev/htop.git",
+          "branch": "main",
+          "using": null
+        }
+      },
+      "revision": 0,
+      "version_scheme": 0,
+      "bottle": {
+        "stable": {
+          "rebuild": 1,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_sonoma": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/htop/blobs/sha256:ea457e022296c96a73ebecc31119ea225c2b41670426a9099bccf5f1d17673ec",
+              "sha256": "ea457e022296c96a73ebecc31119ea225c2b41670426a9099bccf5f1d17673ec"
+            },
+            "arm64_ventura": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/htop/blobs/sha256:5895685e6db67598024850ca3c440e1244ee5dd54bc7c6b5345b28d74f9fa4f0",
+              "sha256": "5895685e6db67598024850ca3c440e1244ee5dd54bc7c6b5345b28d74f9fa4f0"
+            },
+            "arm64_monterey": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/htop/blobs/sha256:91b0b5fe4ffb977e6381664d74ec48e890da908a346473b5e4d88f8117a2dc23",
+              "sha256": "91b0b5fe4ffb977e6381664d74ec48e890da908a346473b5e4d88f8117a2dc23"
+            },
+            "sonoma": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/htop/blobs/sha256:c3ee757e215de2dfd151ea9eb68ef53bb64ba86c5d07a443c6477bdb952f02bf",
+              "sha256": "c3ee757e215de2dfd151ea9eb68ef53bb64ba86c5d07a443c6477bdb952f02bf"
+            },
+            "ventura": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/htop/blobs/sha256:69f690190833cf309baa396b7a7a8218ec012ca93e0825a2b2a4d9f0d5cafb33",
+              "sha256": "69f690190833cf309baa396b7a7a8218ec012ca93e0825a2b2a4d9f0d5cafb33"
+            },
+            "monterey": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/htop/blobs/sha256:9872ffeea0cbab0d5f2e418fd06442663a113b67be12e15b0ece20e701f4ada3",
+              "sha256": "9872ffeea0cbab0d5f2e418fd06442663a113b67be12e15b0ece20e701f4ada3"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/htop/blobs/sha256:85ee4a9f06bc81442fc93e02f8aa875a7641781aa147aab1f863e5c4d744b47d",
+              "sha256": "85ee4a9f06bc81442fc93e02f8aa875a7641781aa147aab1f863e5c4d744b47d"
+            }
+          }
+        }
+      },
+      "pour_bottle_only_if": null,
+      "keg_only": false,
+      "keg_only_reason": null,
+      "options": [
+  
+      ],
+      "build_dependencies": [
+        "autoconf",
+        "automake",
+        "libtool",
+        "pkg-config"
+      ],
+      "dependencies": [
+        "ncurses"
+      ],
+      "test_dependencies": [
+  
+      ],
+      "recommended_dependencies": [
+  
+      ],
+      "optional_dependencies": [
+  
+      ],
+      "uses_from_macos": [
+  
+      ],
+      "uses_from_macos_bounds": [
+  
+      ],
+      "requirements": [
+  
+      ],
+      "conflicts_with": [
+  
+      ],
+      "conflicts_with_reasons": [
+  
+      ],
+      "link_overwrite": [
+  
+      ],
+      "caveats": "htop requires root privileges to correctly display all running processes,\nso you will need to run `sudo htop`.\nYou should be certain that you trust any software you grant root privileges.\n",
+      "installed": [
+        {
+          "version": "3.3.0",
+          "used_options": [
+  
+          ],
+          "built_as_bottle": true,
+          "poured_from_bottle": true,
+          "time": 1725402244,
+          "runtime_dependencies": [
+            {
+              "full_name": "ncurses",
+              "version": "6.5",
+              "revision": 0,
+              "pkg_version": "6.5",
+              "declared_directly": true
+            }
+          ],
+          "installed_as_dependency": false,
+          "installed_on_request": true
+        }
+      ],
+      "linked_keg": "3.3.0",
+      "pinned": false,
+      "outdated": false,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "disabled": false,
+      "disable_date": null,
+      "disable_reason": null,
+      "post_install_defined": false,
+      "service": null,
+      "tap_git_head": "774ec3ea126507e59b2237f116d8004ec5ce2637",
+      "ruby_source_path": "Formula/h/htop.rb",
+      "ruby_source_checksum": {
+        "sha256": "3f0a30e1347a521f7abd6a99f5d70474739919ab5a8a513148094fe3b92c5e0f"
+      }
+    }
+  ]
+  

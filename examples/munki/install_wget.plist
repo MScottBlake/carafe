@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>autoremove</key>
+	<false/>
+	<key>catalogs</key>
+	<array>
+		<string>production</string>
+	</array>
+	<key>category</key>
+	<string>Developer Tools</string>
+	<key>description</key>
+	<string>Wget installed via Homebrew</string>
+	<key>developer</key>
+	<string>Wget team</string>
+	<key>display_name</key>
+	<string>wget</string>
+	<key>icon_name</key>
+	<string>homebrew</string>
+	<key>installer_type</key>
+	<string>nopkg</string>
+	<key>minimum_os_version</key>
+	<string>10.4.0</string>
+	<key>name</key>
+	<string>homebrew_wget</string>
+	<key>installcheck_script</key>
+	<string>#!/bin/bash
+if [ ! -f /opt/homebrew/bin/brew ]; then
+    echo "homebrew is not installed"
+    exit 0
+fi
+/opt/macadmins/bin/carafe check wget --munki-installcheck
+exit $?
+    </string>
+	<key>postinstall_script</key>
+	<string>#!/bin/bash
+/opt/macadmins/bin/carafe install wget
+exit $?
+    </string>
+	<key>uninstall_script</key>
+	<string>#!/bin/bash
+/opt/macadmins/bin/carafe uninstall wget
+exit $?
+    </string>
+	<key>version</key>
+	<string>0.0</string>
+	<key>requires</key>
+	<array>
+		<string>carafe</string>
+		<string>Homebrew</string>
+	</array>
+    <key>unattended_install</key>
+    <true/>
+    <key>uninstallable</key>
+    <true/>
+    <key>uninstall_method</key>
+    <string>uninstall_script</string>
+    <key>unattended_uninstall</key>
+    <true/>
+</dict>
+</plist>
