@@ -15,15 +15,15 @@ local-prefix: "github.com/macadmins/carafe"
 threshold:
   # (optional; default 0)
   # Minimum coverage percentage required for individual files.
-  file: 40
+  file: 50
 
   # (optional; default 0)
   # Minimum coverage percentage required for each package.
-  package: 40
+  package: 50
 
   # (optional; default 0)
   # Minimum overall project coverage percentage required.
-  total: 40
+  total: 70
 
 # Holds regexp rules which will override thresholds for matched files or packages
 # using their paths.
