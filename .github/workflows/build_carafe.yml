@@ -45,6 +45,7 @@ jobs:
         uses: mikepenz/release-changelog-builder-action@c9dc8369bccbc41e0ac887f8fd674f5925d315f7 # v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          mode: "COMMIT"
 
       - name: Create Release
         id: create_release
