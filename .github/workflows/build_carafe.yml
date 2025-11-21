@@ -59,4 +59,10 @@ jobs:
           body: |
             # What's Changed
             ${{ steps.changelog.outputs.changelog }}
-          files: ${{github.workspace}}/*.pkg
+          files: ${{github.workspace}}/output/*.pkg
+
+      - name: Upload packages
+        uses: actions/upload-artifact@0b2256b8c012f0828dc542b3febcab082c67f72b # v4.3.4
+        with:
+          name: packages
+          path: output/
